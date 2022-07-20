@@ -1,0 +1,40 @@
+/* Color pallet */
+
+$white:         #ffffff;
+$white-100:     #c4c4c4;
+$white-200:     #c3c3c3;
+$white-300:     #bbbbbb;
+$blue:          #43abf0;
+$blue-100:      #42a9ed;
+$blue-200:      #3e9cdc;
+$grey:          #3d4050;
+$grey-100:      #2a2b30;
+$grey-200:      #272733;
+$black-200:     #231f20;
+$black-100:     #10101d;
+$black:         #000000;
+
+/* Font size */
+
+$font-size-16:  rem-calc(16);
+
+/* Font weight */
+
+$font-weight-regular:       400;
+$font-weight-semi-bold:     600;
+$font-weight-bold:          700;
+$font-weight-extra-bold:    800;
+
+/* Font family */
+
+$lato-font:     "Lato", "Arial", sans-serif;
+$raleway-font:  "Raleway", "Arial", sans-serif;
+
+/* Media breakpoint */
+
+$breakpoint-xs:     rem-calc(0);
+$breakpoint-sm:     rem-calc(576);
+$breakpoint-md:     rem-calc(768);
+$breakpoint-lg:     rem-calc(992);
+$breakpoint-xl:     rem-calc(1200);
+$breakpoint-xxl:    rem-calc(1400);

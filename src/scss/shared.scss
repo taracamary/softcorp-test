@@ -1,0 +1,55 @@
+@import "mixins";
+
+.container {
+    width: 100%;
+    max-width: rem-calc(1172);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 rem-calc(15);
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+.section-divided {
+    padding-bottom: rem-calc(50);
+
+    &:first-of-type {
+        padding-top: rem-calc(50);
+
+        // @include media-breakpoint-down(md) {
+        //     padding-top: rem-calc(30);
+        // }
+    }
+
+    // @include media-breakpoint-down(md) {
+    //     padding-bottom: rem-calc(30);
+    // }
+}
+
+.reset-button {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    font: inherit;
+    text-align: inherit;
+    line-height: normal;
+    background: transparent;
+    border: none;
+    color: inherit;
+    overflow: visible;
+    outline: none;
+
+    :focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    :focus:not(:-moz-focusring) {
+        outline: none;
+    }
+}
