@@ -1,0 +1,26 @@
+svg {
+    &.search {
+        width: rem-calc(35);
+        height: rem-calc(35);
+    }
+
+    &.percent {
+        width: rem-calc(31);
+        height: rem-calc(32);
+    }
+
+    &.file {
+        width: rem-calc(40);
+        height: rem-calc(43);
+    }
+
+    &.mail {
+        width: rem-calc(37);
+        height: rem-calc(29);
+    }
+
+    &.money {
+        width: rem-calc(39);
+        height: rem-calc(27);
+    }
+}

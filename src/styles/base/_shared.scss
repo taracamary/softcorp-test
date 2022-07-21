@@ -32,24 +32,56 @@
     }
 }
 
-.reset-button {
-    margin: 0;
-    padding: 0;
-    width: auto;
-    font: inherit;
-    text-align: inherit;
-    line-height: normal;
-    background: transparent;
-    border: none;
-    color: inherit;
-    overflow: visible;
-    outline: none;
+// .reset-button {
+//     margin: 0;
+//     padding: 0;
+//     width: auto;
+//     font: inherit;
+//     text-align: inherit;
+//     line-height: normal;
+//     background: transparent;
+//     border: none;
+//     color: inherit;
+//     overflow: visible;
+//     outline: none;
 
-    :focus:not(:focus-visible) {
-        outline: none;
+//     :focus:not(:focus-visible) {
+//         outline: none;
+//     }
+
+//     :focus:not(:-moz-focusring) {
+//         outline: none;
+//     }
+// }
+
+.btn {
+    @include reset-btn-styles();
+    padding: rem-calc(15) rem-calc(30);
+    text-transform: uppercase;
+    border-radius: rem-calc(4);
+    cursor: pointer;
+    overflow: hidden;
+
+    &--blue {
+        background-color: $blue;
+        border: 1px solid $white;
+        color: $white;
+
+        @include hover-focus-active {
+           background-color: $white;
+           border: 1px solid $blue;
+           color: $blue;
+        }
     }
 
-    :focus:not(:-moz-focusring) {
-        outline: none;
+    &--white {
+        background-color: $white;
+        border: 1px solid $grey-100;
+        color: $grey-100;
+
+        @include hover-focus-active {
+            border-color: $blue;
+            color: $blue;
+        }
     }
 }

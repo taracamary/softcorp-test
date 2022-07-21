@@ -1,8 +1,26 @@
 @mixin hover-focus-active {
-
     &:hover,
     &:active,
     &:focus {
         @content;
     }
+}
+
+@mixin list-unstyled() {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+@mixin reset-btn-styles() {
+    background-color: transparent;
+    border: none;
+}
+
+@mixin limit-text-rows($lines-number:3) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines-number;
+    -webkit-box-orient: vertical;
 }

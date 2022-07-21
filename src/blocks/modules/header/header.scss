@@ -1,17 +1,51 @@
 .header {
-    position: sticky;
+    position: absolute;
+    top: 0;
+    width: 100%;
     padding: rem-calc(30) 0;
     background-color: rgba($black-200, 0.9);
+
+    @include media-breakpoint-up(lg) {
+        min-width: rem-calc(100);
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     &__logo {
         font-family: $raleway-font;
         font-size: $font-size-28;
         font-weight: $font-weight-extra-bold;
         line-height: unitless-lh(28, 33);
-        color: $white;
     }
 
     &__logo--accent {
         color: $blue-100;
+    }
+
+    &__nav-list {
+        @include list-unstyled();
+        display: flex;
+    }
+
+    &__nav-item {
+        margin-left: rem-calc(60);
+        font-size: $font-size-13;
+        font-weight: $font-weight-semi-bold;
+        line-height: unitless-lh(13, 15);
+        text-transform: uppercase;
+        color: $white;
+        cursor: pointer;
+
+        @include hover-focus-active() {
+            color: $blue;
+        }
+
+        &--active {
+            color: $blue;
+        }
     }
 }

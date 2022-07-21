@@ -1,0 +1,93 @@
+.order {
+    position: relative;
+    padding: rem-calc(120) 0 rem-calc(150);
+    background: url('../../../img/order-bg.png') center center / cover no-repeat;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: $grey-200;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: rem-calc(30);
+        font-size: $font-size-36;
+        font-weight: $font-weight-extra-bold;
+        line-height: unitless-lh(36, 43);
+        text-align: center;
+        text-transform: uppercase;
+
+        &--accent {
+            color: $blue;
+        }
+    }
+
+    &__description {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: rem-calc(80);
+        font-size: $font-size-18;
+        line-height: unitless-lh(18, 22);
+    }
+
+    &__list {
+        @include list-unstyled();
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: rem-calc(30)
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:first-of-type) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: rem-calc(50);
+                right: 55%;
+                width: rem-calc(110);
+                height: rem-calc(6);
+                background: url('../../../img/sprites/dot.svg') center center / 20px repeat-x;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    &__item-icon {
+        width: rem-calc(100);
+        height: rem-calc(100);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 rem-calc(16);
+        margin-bottom: rem-calc(20);
+        background-color: $blue-200;
+        border: 5px solid $blue-300;
+        border-radius: 50%;
+    }
+
+    &__item-text {
+        margin: 0;
+        font-size: $font-size-16;
+        line-height: unitless-lh(16, 19);
+        text-align: center;
+    }
+
+    // &__dots {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 6px;
+    //     background-image: url('../../../img/sprites/dot.svg');
+    //     background-position: center;
+    //     background-size: 20px;
+    //     background-repeat: repeat-x;
+    // }
+}
