@@ -1,0 +1,17 @@
+.header {
+    position: sticky;
+    padding: rem-calc(30) 0;
+    background-color: rgba($black-200, 0.9);
+
+    &__logo {
+        font-family: $raleway-font;
+        font-size: $font-size-28;
+        font-weight: $font-weight-extra-bold;
+        line-height: unitless-lh(28, 33);
+        color: $white;
+    }
+
+    &__logo--accent {
+        color: $blue-100;
+    }
+}
