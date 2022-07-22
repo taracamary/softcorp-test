@@ -49,5 +49,33 @@
                 <p class="order__item-text">Excepteur sint occaecat cupidatat non proident</p>
             </li>
         </ul>
+        <form class="order__form" action="#" method="get" name="form" autocomplete="off">
+            <fieldset class="order__form-fildset">
+                <label class="visually-hidden" for="order__form-select"></label>
+                <select class="order__form-select" name="order__form-select" id="order__form-select">
+                    <option value="0" selected>Выберите тип системы</option>
+                    <option value="1">Sed ut perspiciatis</option>
+                    <option value="2">Nemo enim ipsam</option>
+                    <option value="3">Et harum quidem</option>
+                    <option value="4">Temporibus autem</option>
+                    <option value="5">Itaque earum rerum</option>
+                </select>
+
+                <label class="visually-hidden" for="order__form-email"></label>
+                <input class="order__form-input" name="order__form-email" id="order__form-email" type="email" placeholder="Ваш e-mail" />
+
+                <label class="visually-hidden" for="order__form-name"></label>
+                <input class="order__form-input" name="order__form-name" id="order__form-name" type="email" placeholder="Ваше имя" />
+            </fieldset>
+
+            <fieldset class="order__form-fildset">
+                <label class="order__form-label" for="order__form-range">
+                    Sed ut perspiciatis, unde omnis iste natus
+                    <input class="order__form-range" name="order__form-range" id="order__form-range" type="range" min="1" max="100" value="75" />
+                </label>
+
+                <input class="order__form-btn btn btn--blue" type="submit" value="Отправить">
+            </fieldset>
+        </form>
     </div>
 </section>

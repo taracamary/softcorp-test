@@ -76,8 +76,8 @@
 
     &--white {
         background-color: $white;
-        border: 1px solid $grey-100;
-        color: $grey-100;
+        border: 1px solid $blue-400;
+        color: $blue-400;
 
         @include hover-focus-active {
             border-color: $blue;
