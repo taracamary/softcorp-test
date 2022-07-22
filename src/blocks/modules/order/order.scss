@@ -34,6 +34,8 @@
         margin-bottom: rem-calc(80);
         font-size: $font-size-18;
         line-height: unitless-lh(18, 22);
+        text-align: center;
+        color: $white-400;
     }
 
     &__list {
@@ -42,6 +44,15 @@
         grid-template-columns: repeat(5, 1fr);
         gap: rem-calc(30);
         margin-bottom: rem-calc(80);
+
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__item {
@@ -57,6 +68,13 @@
                 height: rem-calc(6);
                 background: url('../../../img/sprites/dot.svg') center center / 20px repeat-x;
                 transform: translateX(-50%);
+
+                @include media-breakpoint-down(md) {
+                    top: -50px;
+                    width: 20px;
+                    height: 110px;
+                    background-repeat: repeat-y;
+                }
             }
         }
     }
@@ -71,7 +89,7 @@
         padding: 0 rem-calc(16);
         margin-bottom: rem-calc(20);
         background-color: $blue-200;
-        border: 5px solid $blue-300;
+        border: rem-calc(5) solid $blue-300;
         border-radius: 50%;
     }
 
@@ -88,15 +106,6 @@
         grid-template-rows: repeat(3, max-content);
         gap: rem-calc(30);
     }
-
-    // &__form-fildset {
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     gap: rem-calc(30);
-    //     padding: 0;
-    //     border: none;
-    // }
 
     &__form-input,
     &__form-select {
@@ -130,7 +139,7 @@
 
     &__select-current {
         &:focus {
-            &+.order__select-list {
+            & + .order__select-list {
                 opacity: 1;
 
                 .order__select-option {
@@ -139,14 +148,14 @@
             }
 
             .order__select-icon {
-                transform: translateY(-50%) rotate(180deg);
                 stroke: $white;
+                transform: translateY(-50%) rotate(180deg);
             }
 
             .order__select-text {
                 background-color: rgba($grey-100, 0.85);
+                border-radius: rem-calc(3) rem-calc(3) 0 0;
                 color: $white;
-                border-radius: 3px 3px 0 0;
             }
         }
     }
@@ -154,7 +163,7 @@
     &__select-icon {
         position: absolute;
         top: 50%;
-        right: 10px;
+        right: rem-calc(10);
         transform: translateY(-50%);
         transition: transform 0.3s ease;
     }
@@ -162,17 +171,17 @@
     &__select-input {
         display: none;
 
-        &:checked+.order__select-text {
+        &:checked + .order__select-text {
             display: block;
         }
     }
 
     &__select-text {
         display: none;
-        padding: 12px 10px;
+        padding: rem-calc(12) rem-calc(10);
         background-color: $white-100;
+        border-radius: rem-calc(3);
         color: $grey-300;
-        border-radius: 3px;
         cursor: pointer;
     }
 
@@ -183,7 +192,7 @@
         max-height: rem-calc(180);
         overflow-y: auto;
         border: 1px solid rgba($grey-100, 0.85);
-        border-radius: 0 0 3px 3px;
+        border-radius: 0 0 rem-calc(3) rem-calc(3);
         opacity: 0;
     }
 
@@ -191,7 +200,7 @@
         position: relative;
         z-index: 2;
         display: block;
-        padding: 12px 10px;
+        padding: rem-calc(12) rem-calc(10);
         background-color: $grey-300;
 
         &:hover,
@@ -250,8 +259,8 @@
     &__form-range {
         -webkit-appearance: none;
         width: 100%;
-        height: 6px;
-        border-radius: 5px;
+        height: rem-calc(6);
+        border-radius: rem-calc(5);
         background-color: rgba($white, 0.7);
         border: 1px solid $white;
         opacity: 0.7;
@@ -264,20 +273,20 @@
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
-            width: 25px;
-            height: 25px;
+            width: rem-calc(25);
+            height: rem-calc(25);
             border-radius: 50%;
-            background: #42a9ed;
-            border: 3px solid #286690;
+            background: $blue-100;
+            border: 3px solid $blue-300;
             cursor: pointer;
         }
 
         &::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
+            width: rem-calc(25);
+            height: rem-calc(25);
             border-radius: 50%;
-            background: #42a9ed;
-            border: 3px solid #286690;
+            background: $blue-100;
+            border: 3px solid $blue-300;
             cursor: pointer;
         }
     }

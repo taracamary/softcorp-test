@@ -32,28 +32,6 @@
     }
 }
 
-// .reset-button {
-//     margin: 0;
-//     padding: 0;
-//     width: auto;
-//     font: inherit;
-//     text-align: inherit;
-//     line-height: normal;
-//     background: transparent;
-//     border: none;
-//     color: inherit;
-//     overflow: visible;
-//     outline: none;
-
-//     :focus:not(:focus-visible) {
-//         outline: none;
-//     }
-
-//     :focus:not(:-moz-focusring) {
-//         outline: none;
-//     }
-// }
-
 .btn {
     @include reset-btn-styles();
     padding: rem-calc(15) rem-calc(30);

@@ -16,6 +16,7 @@
     }
 
     &__logo {
+        @include link-unstyled();
         font-family: $raleway-font;
         font-size: $font-size-28;
         font-weight: $font-weight-extra-bold;
@@ -47,5 +48,9 @@
         &--active {
             color: $blue;
         }
+    }
+
+    &__nav-link {
+        @include link-unstyled();
     }
 }

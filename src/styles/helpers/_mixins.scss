@@ -12,6 +12,11 @@
     list-style: none;
 }
 
+@mixin link-unstyled() {
+    color: inherit;
+    text-decoration: none;
+}
+
 @mixin reset-btn-styles() {
     background-color: transparent;
     border: none;
