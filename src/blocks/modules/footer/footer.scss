@@ -1,0 +1,63 @@
+.footer {
+    padding: rem-calc(30) 0;
+    background-color: $grey;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    &__copy {
+        font-size: $font-size-13;
+        line-height: unitless-lh(13, 16);
+    }
+
+    &__payments,
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: rem-calc(38);
+        font-size: $font-size-13;
+        line-height: unitless-lh(13, 16);
+    }
+
+    &__payments {
+        @include list-unstyled();
+        position: relative;
+        color: $white-300;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: rem-calc(1);
+            height: rem-calc(18);
+            background-color: $white-300;
+        }
+
+        &::before {
+            left: rem-calc(-40);
+        }
+
+        &::after {
+            right: rem-calc(-40);
+        }
+    }
+
+    &__contacts-link {
+        text-decoration: none;
+        color: $white;
+    }
+
+    &__payments-method,
+    &__contacts-link {
+        display: flex;
+        align-items: center;
+        gap: rem-calc(10)
+    }
+}

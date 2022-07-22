@@ -26,8 +26,8 @@
             </li>
             <li class="order__item">
                 <div class="order__item-icon">
-                    <svg class="file">
-                        <use xlink:href="img\sprites\file.svg#file"></use>
+                    <svg class="file-add">
+                        <use xlink:href="img\sprites\file-add.svg#file-add"></use>
                     </svg>
                 </div>
                 <p class="order__item-text">Sed do eiusmod tempor</p>
@@ -48,34 +48,86 @@
                 </div>
                 <p class="order__item-text">Excepteur sint occaecat cupidatat non proident</p>
             </li>
+
         </ul>
         <form class="order__form" action="#" method="get" name="form" autocomplete="off">
-            <fieldset class="order__form-fildset">
-                <label class="visually-hidden" for="order__form-select"></label>
-                <select class="order__form-select" name="order__form-select" id="order__form-select">
-                    <option value="0" selected>Выберите тип системы</option>
-                    <option value="1">Sed ut perspiciatis</option>
-                    <option value="2">Nemo enim ipsam</option>
-                    <option value="3">Et harum quidem</option>
-                    <option value="4">Temporibus autem</option>
-                    <option value="5">Itaque earum rerum</option>
-                </select>
+            <div class="order__select">
+                <div class="order__select-current" tabindex="1">
+                    <div class="order__select-value">
+                        <input class="order__select-input" type="radio" id="0" value="1" name="order__select-option"
+                            checked="checked">
+                        <label class="order__select-text">Выберите тип системы</label>
+                    </div>
+                    <div class="order__select-value">
+                        <input class="order__select-input" type="radio" id="1" value="2" name="order__select-option">
+                        <label class="order__select-text">Sed ut perspiciatis</label>
+                    </div>
+                    <div class="order__select-value">
+                        <input class="order__select-input" type="radio" id="2" value="3" name="order__select-option">
+                        <label class="order__select-text">Nemo enim ipsam</label>
+                    </div>
+                    <div class="order__select-value">
+                        <input class="order__select-input" type="radio" id="3" value="4" name="order__select-option">
+                        <label class="order__select-text">Et harum quidem</label>
+                    </div>
+                    <div class="order__select-value">
+                        <input class="order__select-input" type="radio" id="4" value="5" name="order__select-option">
+                        <label class="order__select-text">Temporibus autem</label>
+                    </div>
+                    <div class="order__select-value">
+                        <input class="order__select-input" type="radio" id="5" value="6" name="order__select-option">
+                        <label class="order__select-text">Itaque earum rerum</label>
+                    </div>
+                    <svg class="order__select-icon chevron">
+                        <use xlink:href="img\sprites\chevron.svg#chevron"></use>
+                    </svg>
+                </div>
+                <ul class="order__select-list">
+                    <li>
+                        <label class="order__select-option" for="1" aria-hidden="aria-hidden">Sed ut
+                            perspiciatis</label>
+                    </li>
+                    <li>
+                        <label class="order__select-option" for="2" aria-hidden="aria-hidden">Nemo enim ipsam</label>
+                    </li>
+                    <li>
+                        <label class="order__select-option" for="3" aria-hidden="aria-hidden">Et harum quidem</label>
+                    </li>
+                    <li>
+                        <label class="order__select-option" for="4" aria-hidden="aria-hidden">Temporibus autem</label>
+                    </li>
+                    <li>
+                        <label class="order__select-option" for="5" aria-hidden="aria-hidden">Itaque earum rerum</label>
+                    </li>
+                </ul>
+            </div>
 
-                <label class="visually-hidden" for="order__form-email"></label>
-                <input class="order__form-input" name="order__form-email" id="order__form-email" type="email" placeholder="Ваш e-mail" />
+            <label class="visually-hidden" for="order__form-email"></label>
+            <input class="order__form-input" name="order__form-email" id="order__form-email" type="email" placeholder="Ваш e-mail" />
 
-                <label class="visually-hidden" for="order__form-name"></label>
-                <input class="order__form-input" name="order__form-name" id="order__form-name" type="email" placeholder="Ваше имя" />
-            </fieldset>
+            <label class="visually-hidden" for="order__form-name"></label>
+            <input class="order__form-input" name="order__form-name" id="order__form-name" type="text" placeholder="Ваше имя" />
 
-            <fieldset class="order__form-fildset">
-                <label class="order__form-label" for="order__form-range">
+
+            <label class="order__form-label" for="order__form-range">
+                <p class="order__form-text">
                     Sed ut perspiciatis, unde omnis iste natus
-                    <input class="order__form-range" name="order__form-range" id="order__form-range" type="range" min="1" max="100" value="75" />
-                </label>
+                    <span>75%</span>
+                </p>
+                <input class="order__form-range" name="order__form-range" id="order__form-range" type="range" min="1" max="100" value="75" />
+            </label>
 
-                <input class="order__form-btn btn btn--blue" type="submit" value="Отправить">
-            </fieldset>
+            <div class="order__file">
+                <label class="order__file-label" for="cvFile">
+                    <svg class="file">
+                        <use xlink:href="img\sprites\file.svg#file"></use>
+                    </svg>
+                    Прикрепить файл
+                </label>
+                <input class="order__file-input" type="file" id="cvFile" name="cvFile" accept=".pdf, .docx, .odt">
+            </div>
+
+            <input class="order__form-btn btn btn--blue" type="submit" value="Отправить">
         </form>
     </div>
 </section>

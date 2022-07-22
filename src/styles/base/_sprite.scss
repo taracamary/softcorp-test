@@ -10,6 +10,11 @@ svg {
     }
 
     &.file {
+        width: rem-calc(18);
+        height: rem-calc(21);
+    }
+
+    &.file-add {
         width: rem-calc(40);
         height: rem-calc(43);
     }
@@ -19,8 +24,38 @@ svg {
         height: rem-calc(29);
     }
 
+    &.mail-small {
+        width: rem-calc(16);
+        height: rem-calc(13);
+    }
+
     &.money {
         width: rem-calc(39);
         height: rem-calc(27);
+    }
+
+    &.chevron {
+        width: rem-calc(9);
+        height: rem-calc(6);
+    }
+
+    &.qiwi {
+        width: rem-calc(21);
+        height: rem-calc(20);
+    }
+
+    &.vk {
+        width: rem-calc(12);
+        height: rem-calc(14);
+    }
+
+    &.web-money {
+        width: rem-calc(19);
+        height: rem-calc(18);
+    }
+
+    &.yandex {
+        width: rem-calc(15);
+        height: rem-calc(18);
     }
 }
