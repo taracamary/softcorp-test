@@ -1,23 +1,31 @@
 <header class="header">
-	<div class="header__wrapper container">
-		<a class="header__logo" href="/">
-			LoremIpsum.<span class="header__logo--accent">Net</span>
+    <div class="header__wrapper container">
+        <label class="visually-hidden" for="header__input-hamburger"></label>
+        <input class="header__input" name="header__input-hamburger" type="checkbox" />
+
+        <div class="header__hamburger">
+            <span class="header__hamburger-line"></span>
+            <span class="header__hamburger-line"></span>
+            <span class="header__hamburger-line"></span>
+        </div>
+
+        <ul class="header__menu">
+            <li class="header__menu-item header__menu-item--active">
+                <a class="header__menu-link" href="#" rel="noopener noreferrer">Бизнес</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="#" rel="noopener noreferrer">О нас</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="#" rel="noopener noreferrer">Цены</a>
+            </li>
+            <li class="header__menu-item">
+                <a class="header__menu-link" href="#" rel="noopener noreferrer">Оформить заказ</a>
+            </li>
+        </ul>
+
+        <a class="header__logo" href="/">
+            LoremIpsum.<span class="header__logo--accent">Net</span>
         </a>
-		<nav class="header__nav">
-			<ul class="header__nav-list">
-				<li class="header__nav-item header__nav-item--active">
-                    <a class="header__nav-link" href="#" rel="noopener noreferrer">Бизнес</a>
-				</li>
-				<li class="header__nav-item">
-					<a class="header__nav-link" href="#" rel="noopener noreferrer">О нас</a>
-				</li>
-				<li class="header__nav-item">
-					<a class="header__nav-link" href="#" rel="noopener noreferrer">Цены</a>
-				</li>
-				<li class="header__nav-item">
-					<a class="header__nav-link" href="#" rel="noopener noreferrer">Оформить заказ</a>
-				</li>
-			</ul>
-		</nav>
-	</div>
+    </div>
 </header>

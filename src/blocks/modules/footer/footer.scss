@@ -6,13 +6,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        p {
-            margin: 0;
-        }
     }
 
     &__copy {
+        margin: 0;
         font-size: $font-size-13;
         line-height: unitless-lh(13, 16);
     }
