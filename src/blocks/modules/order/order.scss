@@ -40,41 +40,86 @@
 
     &__list {
         @include list-unstyled();
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
         gap: rem-calc(30);
         margin-bottom: rem-calc(80);
 
+        @include media-breakpoint-only(xs) {
+            display: flex;
+        flex-direction: column;
+        }
+
+        @include media-breakpoint-up(md) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
         @include media-breakpoint-down(lg) {
+            display: grid;
             grid-template-columns: repeat(3, 1fr);
         }
 
-        @include media-breakpoint-down(md) {
-            display: flex;
-            flex-direction: column;
+        @include media-breakpoint-up(xl) {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @include media-breakpoint-up(xxl) {
+            grid-template-columns: repeat(5, 1fr);
         }
     }
 
     &__item {
         position: relative;
 
-        &:not(:first-of-type) {
-            &::before {
-                content: "";
-                position: absolute;
-                top: rem-calc(50);
-                right: 55%;
-                width: rem-calc(110);
-                height: rem-calc(6);
-                background: url('../../../img/sprites/dot.svg') center center / 20px repeat-x;
-                transform: translateX(-50%);
+        @include media-breakpoint-only(xs) {
+            &:not(:last-of-type) {
+                @include dots-line();
+                margin-bottom: rem-calc(110);
 
-                @include media-breakpoint-down(md) {
-                    top: -50px;
-                    width: 20px;
-                    height: 110px;
-                    background-repeat: repeat-y;
+                &::after {
+                    top: unset;
+                    right: 0;
+                    bottom: rem-calc(-70);
+                    left: 0;
+                    margin: 0 auto;
+                    transform: rotate(90deg);
                 }
+            }
+        }
+
+        @include media-breakpoint-only(sm) {
+            &:not(:nth-child(3n)) {
+                @include dots-line();
+            }
+        }
+
+        @include media-breakpoint-only(md) {
+            &:not(:nth-child(3n)) {
+                @include dots-line();
+            }
+        }
+
+        @include media-breakpoint-only(lg) {
+            &:not(:nth-child(4n)) {
+                @include dots-line();
+            }
+        }
+
+        @include media-breakpoint-only(xl) {
+            &:not(:nth-child(4n)) {
+                @include dots-line();
+            }
+        }
+
+        @include media-breakpoint-only(xxl) {
+            &:not(:nth-child(5n)) {
+                @include dots-line();
+            }
+        }
+
+        &:last-of-type {
+            &::after {
+                content: none !important;
             }
         }
     }
@@ -263,6 +308,7 @@
         border-radius: rem-calc(5);
         background-color: rgba($white, 0.7);
         border: 1px solid $white;
+        cursor: pointer;
         opacity: 0.7;
         transition: opacity 0.2s;
 

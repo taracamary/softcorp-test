@@ -29,3 +29,16 @@
     -webkit-line-clamp: $lines-number;
     -webkit-box-orient: vertical;
 }
+
+@mixin dots-line() {
+    &::after {
+        content: "";
+        position: absolute;
+        top: rem-calc(50);
+        right: rem-calc(-70);
+        width: rem-calc(110);
+        height: rem-calc(6);
+        margin-top: rem-calc(-3);
+        background: url('../../../img/sprites/dot.svg') center center / 20px space;
+    }
+}

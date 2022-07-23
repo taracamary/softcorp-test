@@ -85,31 +85,31 @@
 
 @mixin media-breakpoint-up($size) {
     @if $size==sm {
-        @media (min-width: $breakpoint-xs) {
-            @content;
-        }
-    }
-
-    @else if $size==md {
         @media (min-width: $breakpoint-sm) {
             @content;
         }
     }
 
-    @else if $size==lg {
+    @else if $size==md {
         @media (min-width: $breakpoint-md) {
             @content;
         }
     }
 
-    @else if $size==xl {
+    @else if $size==lg {
         @media (min-width: $breakpoint-lg) {
             @content;
         }
     }
 
-    @else if $size==xxl {
+    @else if $size==xl {
         @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $size==xxl {
+        @media (min-width: $breakpoint-xxl) {
             @content;
         }
     }
