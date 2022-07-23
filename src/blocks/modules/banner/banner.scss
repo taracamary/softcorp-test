@@ -1,7 +1,13 @@
 .banner {
-    height: 100vh;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
     padding-top: rem-calc(64);
     background: url('../../../img/banner-bg.png') center center / cover no-repeat;
+
+    @include media-breakpoint-down(md) {
+        padding: calc(rem-calc(64) + rem-calc(64)) 0 rem-calc(64);
+    }
 
 
     &__wrapper {
@@ -24,12 +30,20 @@
         text-transform: uppercase;
         color: $black;
 
-        &--accent {
-            color: $blue;
+        @include media-breakpoint-only(xs) {
+            margin-bottom: rem-calc(40);
+            font-size: $font-size-24;
+            line-height: unitless-lh(24, 36);
         }
 
         @include media-breakpoint-down(md) {
-            text-align: center;
+            margin-bottom: rem-calc(60);
+            font-size: $font-size-36;
+            line-height: unitless-lh(36, 48);
+        }
+
+        &--accent {
+            color: $blue;
         }
     }
 
@@ -45,6 +59,14 @@
     &__benefit-list {
         @include list-unstyled();
         margin-bottom: rem-calc(80);
+
+        @include media-breakpoint-only(xs) {
+            margin-bottom: rem-calc(40);
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem-calc(60);
+        }
     }
 
     &__benefit-item {
@@ -70,13 +92,22 @@
         }
     }
 
+    &__button-wrapper {
+        display: flex;
+        gap: rem-calc(30);
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+    }
+
     &__button {
         width: rem-calc(183);
         font-size: $font-size-13;
         line-height: unitless-lh(13, 16);
 
-        &:first-of-type {
-            margin-right: rem-calc(30);
+        @include media-breakpoint-down(sm) {
+            width: 100%;
         }
     }
 }

@@ -6,6 +6,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: rem-calc(40);
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            gap: rem-calc(15);
+        }
     }
 
     &__copy {
@@ -18,7 +24,9 @@
     &__contacts {
         display: flex;
         align-items: center;
-        gap: rem-calc(38);
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem-calc(30);
         font-size: $font-size-13;
         line-height: unitless-lh(13, 16);
     }
@@ -26,24 +34,28 @@
     &__payments {
         @include list-unstyled();
         position: relative;
+        margin: 0 rem-calc(40);
         color: $white-300;
 
-        &::before,
-        &::after {
-            content: '';
-            position: absolute;
-            width: rem-calc(1);
-            height: rem-calc(18);
-            background-color: $white-300;
+        @include media-breakpoint-up(md) {
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: rem-calc(1);
+                height: rem-calc(18);
+                background-color: $white-300;
+            }
+
+            &::before {
+                left: rem-calc(-40);
+            }
+
+            &::after {
+                right: rem-calc(-40);
+            }
         }
 
-        &::before {
-            left: rem-calc(-40);
-        }
-
-        &::after {
-            right: rem-calc(-40);
-        }
     }
 
     &__contacts-link {

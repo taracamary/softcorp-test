@@ -29,13 +29,16 @@
     }
 
     &__description {
-        width: 50%;
         margin: 0 auto;
         margin-bottom: rem-calc(80);
         font-size: $font-size-18;
         line-height: unitless-lh(18, 22);
         text-align: center;
         color: $white-400;
+
+        @include media-breakpoint-up(lg) {
+            width: 50%;
+        }
     }
 
     &__list {
@@ -143,6 +146,11 @@
         font-size: $font-size-16;
         line-height: unitless-lh(16, 19);
         text-align: center;
+
+        @include media-breakpoint-only(xs) {
+            width: 50%;
+            margin: 0 auto;
+        }
     }
 
     &__form {
@@ -150,6 +158,10 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, max-content);
         gap: rem-calc(30);
+
+        @include media-breakpoint-down(sm) {
+            grid-template: initial;
+        }
     }
 
     &__form-input,
@@ -184,14 +196,6 @@
 
     &__select-current {
         &:focus {
-            & + .order__select-list {
-                opacity: 1;
-
-                .order__select-option {
-                    cursor: pointer;
-                }
-            }
-
             .order__select-icon {
                 stroke: $white;
                 transform: translateY(-50%) rotate(180deg);
@@ -233,12 +237,31 @@
     &__select-list {
         @include list-unstyled();
         position: absolute;
+        display: none;
         width: 100%;
         max-height: rem-calc(180);
         overflow-y: auto;
         border: 1px solid rgba($grey-100, 0.85);
         border-radius: 0 0 rem-calc(3) rem-calc(3);
-        opacity: 0;
+        scrollbar-width: thin;
+        scrollbar-color: $blue-200 $grey;
+
+        &::-webkit-scrollbar {
+            width: rem-calc(7);
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $grey;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $blue-200;
+            border-radius: rem-calc(3);
+        }
+
+        &--active {
+            display: block;
+        }
     }
 
     &__select-option {
@@ -247,6 +270,7 @@
         display: block;
         padding: rem-calc(12) rem-calc(10);
         background-color: $grey-300;
+        cursor: pointer;
 
         &:hover,
         &:focus {
@@ -256,7 +280,10 @@
 
     &__form-label {
         width: 100%;
-        grid-column: 1/3;
+
+        @include media-breakpoint-up(sm) {
+            grid-column: 1/3;
+        }
     }
 
     &__form-text {
@@ -309,12 +336,6 @@
         background-color: rgba($white, 0.7);
         border: 1px solid $white;
         cursor: pointer;
-        opacity: 0.7;
-        transition: opacity 0.2s;
-
-        &:hover {
-            opacity: 1;
-        }
 
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
@@ -338,6 +359,9 @@
     }
 
     &__form-btn {
-        grid-column: 2/3;
+
+        @include media-breakpoint-up(sm) {
+            grid-column: 2/3;
+        }
     }
 }

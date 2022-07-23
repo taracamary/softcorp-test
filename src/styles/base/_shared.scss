@@ -46,9 +46,9 @@
         color: $white;
 
         @include hover-focus-active {
-           background-color: $white;
-           border: 1px solid $blue;
-           color: $blue;
+            background-color: $white;
+            border: 1px solid $blue;
+            color: $blue;
         }
     }
 

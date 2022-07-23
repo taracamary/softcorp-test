@@ -131,6 +131,8 @@
         }
 
         @include media-breakpoint-down(md) {
+            font-size: $font-size-24;
+            line-height: unitless-lh(24, 36);
             color: rgba($black-200, 0.9);
         }
 

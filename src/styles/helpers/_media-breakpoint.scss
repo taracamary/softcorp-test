@@ -46,13 +46,7 @@
 }
 
 @mixin media-breakpoint-down($size) {
-    @if $size==xs {
-        @media (max-width: $breakpoint-xs - 1) {
-            @content;
-        }
-    }
-
-    @else if $size==sm {
+    @if $size==sm {
         @media (max-width: $breakpoint-sm - 1) {
             @content;
         }
