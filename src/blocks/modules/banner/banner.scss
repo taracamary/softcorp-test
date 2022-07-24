@@ -54,6 +54,11 @@
         font-weight: $font-weight-bold;
         line-height: unitless-lh(20, 24);
         color: $black;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-size-16;
+            line-height: unitless-lh(16, 24);
+        }
     }
 
     &__benefit-list {
@@ -76,6 +81,11 @@
         line-height: unitless-lh(20, 24);
         color: $black;
 
+        @include media-breakpoint-down(md) {
+            font-size: $font-size-16;
+            line-height: unitless-lh(16, 24);
+        }
+
         &:not(:last-of-type) {
             margin-bottom: rem-calc(5);
         }
@@ -92,7 +102,7 @@
         }
     }
 
-    &__button-wrapper {
+    &__btn-wrapper {
         display: flex;
         gap: rem-calc(30);
 
@@ -101,7 +111,7 @@
         }
     }
 
-    &__button {
+    &__btn {
         width: rem-calc(183);
         font-size: $font-size-13;
         line-height: unitless-lh(13, 16);

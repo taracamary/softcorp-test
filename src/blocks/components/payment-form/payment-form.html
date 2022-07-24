@@ -1,0 +1,92 @@
+<form class="payment-form" action="#" method="post" name="payment-form" autocomplete="off">
+    <div class="payment-form__select">
+        <div class="payment-form__select-current">
+            <div>
+                <input class="payment-form__select-input" name="payment-form__select-option" type="radio" value="Выберите тип системы" checked="checked">
+                <span class="payment-form__select-text">Выберите тип системы</span>
+            </div>
+
+            <div>
+                <input class="payment-form__select-input" id="payment-form__select-option-1" name="payment-form__select-option" type="radio" value="Sed ut perspiciatis">
+                <span class="payment-form__select-text">Sed ut perspiciatis</span>
+            </div>
+
+            <div>
+                <input class="payment-form__select-input" id="payment-form__select-option-2" name="payment-form__select-option" type="radio" value="Nemo enim ipsam">
+                <span class="payment-form__select-text">Nemo enim ipsam</span>
+            </div>
+
+            <div>
+                <input class="payment-form__select-input" id="payment-form__select-option-3" name="payment-form__select-option" type="radio" value="Et harum quidem">
+                <span class="payment-form__select-text">Et harum quidem</span>
+            </div>
+
+            <div>
+                <input class="payment-form__select-input" id="payment-form__select-option-4" name="payment-form__select-option" type="radio" value="Temporibus autem">
+                <span class="payment-form__select-text">Temporibus autem</span>
+            </div>
+
+            <div>
+                <input class="payment-form__select-input" id="payment-form__select-option-5" name="payment-form__select-option" type="radio" value="Itaque earum rerum">
+                <span class="payment-form__select-text">Itaque earum rerum</span>
+            </div>
+
+            <svg class="payment-form__select-icon chevron">
+                <use xlink:href="img\sprites\chevron.svg#chevron"></use>
+            </svg>
+        </div>
+
+        <ul class="payment-form__select-list">
+            <li>
+                <label class="payment-form__select-option" for="payment-form__select-option-1" aria-hidden="true">Sed ut perspiciatis</label>
+            </li>
+
+            <li>
+                <label class="payment-form__select-option" for="payment-form__select-option-2" aria-hidden="true">Nemo enim ipsam</label>
+            </li>
+
+            <li>
+                <label class="payment-form__select-option" for="payment-form__select-option-3" aria-hidden="true">Et harum quidem</label>
+            </li>
+
+            <li>
+                <label class="payment-form__select-option" for="payment-form__select-option-4" aria-hidden="true">Temporibus autem</label>
+            </li>
+
+            <li>
+                <label class="payment-form__select-option" for="payment-form__select-option-5" aria-hidden="true">Itaque earum rerum</label>
+            </li>
+        </ul>
+    </div>
+
+    <label for="payment-form__email">
+        <input class="payment-form__input" name="payment-form__email" id="payment-form__email" value="" type="email" placeholder="Ваш e-mail" required />
+    </label>
+
+    <label for="payment-form__name">
+        <input class="payment-form__input" name="payment-form__name" id="payment-form__name" value="" type="text" placeholder="Ваше имя" required />
+    </label>
+
+
+    <label class="payment-form__range" for="payment-form__range">
+        <p class="payment-form__form-text">
+            Sed ut perspiciatis, unde omnis iste natus
+            <span>75%</span>
+        </p>
+
+        <input class="payment-form__range-input" name="payment-form__range" type="range" min="1" max="100" value="75" />
+    </label>
+
+    <div>
+        <label class="payment-form__file-label" for="payment-form__file">
+            <svg class="file">
+                <use xlink:href="img\sprites\file.svg#file"></use>
+            </svg>
+            Прикрепить файл
+        </label>
+
+        <input class="payment-form__file-input" name="payment-form__file" type="file" accept=".pdf, .docx, .odt" />
+    </div>
+
+    <input class="payment-form__btn btn btn--blue" name="payment-form__btn" id="payment-form__btn-submit" type="submit" value="Отправить">
+</form>

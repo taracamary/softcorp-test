@@ -94,6 +94,7 @@
     &__menu {
         @include list-unstyled();
         order: 2;
+        z-index: 1;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
@@ -151,7 +152,7 @@
 
     &__logo {
         @include link-unstyled();
-        z-index: -1;
+        z-index: 0;
         font-family: $raleway-font;
         font-size: $font-size-28;
         font-weight: $font-weight-extra-bold;
@@ -168,6 +169,8 @@
             bottom: 0;
             display: flex;
             align-items: center;
+            font-size: $font-size-24;
+            line-height: unitless-lh(24, 28);
         }
     }
 }

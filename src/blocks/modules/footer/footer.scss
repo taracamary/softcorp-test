@@ -34,10 +34,32 @@
     &__payments {
         @include list-unstyled();
         position: relative;
-        margin: 0 rem-calc(40);
         color: $white-300;
 
+        @include media-breakpoint-down(md) {
+            margin: rem-calc(20) 0;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: rem-calc(1);
+                background-color: $white-300;
+            }
+
+            &::before {
+                top: rem-calc(-20);
+            }
+
+            &::after {
+                bottom: rem-calc(-20);
+            }
+        }
+
         @include media-breakpoint-up(md) {
+            margin: 0 rem-calc(40);
+
             &::before,
             &::after {
                 content: '';
@@ -64,8 +86,8 @@
 
     &__payments-method,
     &__contacts-link {
-        display: flex;
-        align-items: center;
+        display: grid;
+        grid-template-columns: rem-calc(20) 1fr;
         gap: rem-calc(10)
     }
 }
