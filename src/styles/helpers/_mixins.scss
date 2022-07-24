@@ -39,6 +39,10 @@
         width: rem-calc(110);
         height: rem-calc(6);
         margin-top: rem-calc(-3);
-        background: url('../../../img/sprites/dot.svg') center center / 20px space;
+        background: url('../img/sprites/dot.svg') center center / 20px space;
+
+        @include media-breakpoint-only(xs) {
+            width: rem-calc(60);
+        }
     }
 }

@@ -1,7 +1,11 @@
 .order {
     position: relative;
     padding: rem-calc(120) 0 rem-calc(150);
-    background: url('../../../img/order-bg.png') center center / cover no-repeat;
+    background: url('../img/order-bg.png') center center / cover no-repeat;
+
+    @include media-breakpoint-down(md) {
+        padding: rem-calc(40) 0;
+    }
 
     &::before {
         content: '';
@@ -41,6 +45,10 @@
         text-align: center;
         color: $white-400;
 
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem-calc(40);
+        }
+
         @include media-breakpoint-up(lg) {
             width: 50%;
         }
@@ -54,6 +62,10 @@
         @include media-breakpoint-only(xs) {
             display: flex;
             flex-direction: column;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem-calc(40);
         }
 
         @include media-breakpoint-up(md) {
@@ -84,6 +96,10 @@
                 @include dots-line();
                 margin-bottom: rem-calc(110);
 
+                @include media-breakpoint-only(xs) {
+                    margin-bottom: rem-calc(50);
+                }
+
                 &::after {
                     top: unset;
                     right: 0;
@@ -91,6 +107,10 @@
                     left: 0;
                     margin: 0 auto;
                     transform: rotate(90deg);
+
+                    @include media-breakpoint-only(xs) {
+                        bottom: rem-calc(-40);
+                    }
                 }
             }
         }

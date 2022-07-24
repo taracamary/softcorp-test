@@ -82,7 +82,6 @@
 
                 .header__hamburger span {
                     &:first-child {
-                        background-color: rgba($black-200, 0.9);
                         transform: rotate(35deg);
                     }
 
@@ -91,7 +90,6 @@
                     }
 
                     &:last-child {
-                        background-color: rgba($black-200, 0.9);
                         transform: rotate(-35deg);
                     }
                 }
@@ -114,13 +112,14 @@
         }
 
         @include media-breakpoint-down(md) {
+            align-items: flex-start;
             flex-direction: column;
             justify-content: flex-start;
             width: 80%;
             height: 100vh;
             margin: 0 rem-calc(-15);
-            padding-top: rem-calc(64);
-            background: $white;
+            padding: rem-calc(64) rem-calc(15);
+            background-color: $black-200;
             transform: translate(-150%);
             transition: transform 0.4s ease-in-out;
         }
@@ -140,9 +139,9 @@
         }
 
         @include media-breakpoint-down(md) {
+            margin-left: 0;
             font-size: $font-size-24;
             line-height: unitless-lh(24, 36);
-            color: rgba($black-200, 0.9);
         }
 
         @include media-breakpoint-down(lg) {

@@ -3,7 +3,7 @@
     align-items: center;
     min-height: 100vh;
     padding-top: rem-calc(64);
-    background: url('../../../img/banner-bg.png') center center / cover no-repeat;
+    background: url('../img/banner-bg.png') center center / cover no-repeat;
 
     @include media-breakpoint-down(md) {
         padding: calc(rem-calc(64) + rem-calc(64)) 0 rem-calc(64);
