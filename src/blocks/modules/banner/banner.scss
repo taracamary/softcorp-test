@@ -9,7 +9,6 @@
         padding: calc(rem-calc(64) + rem-calc(64)) 0 rem-calc(64);
     }
 
-
     &__wrapper {
         display: flex;
         align-items: center;
@@ -75,8 +74,8 @@
     }
 
     &__benefit-item {
-        padding-left: rem-calc(26);
         position: relative;
+        padding-left: rem-calc(26);
         font-size: $font-size-20;
         line-height: unitless-lh(20, 24);
         color: $black;

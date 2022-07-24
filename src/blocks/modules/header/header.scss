@@ -5,6 +5,10 @@
     height: rem-calc(64);
     background-color: rgba($black-200, 0.9);
 
+    @include media-breakpoint-up(md) {
+        min-height: rem-calc(64);
+    }
+
     &__wrapper {
         display: flex;
         align-items: center;
@@ -13,6 +17,10 @@
 
         @include media-breakpoint-down(md) {
             align-items: initial;
+        }
+
+        @include media-breakpoint-up(md) {
+            min-height: rem-calc(64);
         }
     }
 
@@ -59,10 +67,10 @@
 
         @include media-breakpoint-down(md) {
             position: absolute;
-            top: rem-calc(23);
-            left: rem-calc(15);
             z-index: 3;
             display: block;
+            top: rem-calc(23);
+            left: rem-calc(15);
             width: rem-calc(35);
             height: rem-calc(23);
             opacity: 0;
@@ -93,12 +101,12 @@
 
     &__menu {
         @include list-unstyled();
-        order: 2;
         z-index: 1;
         display: flex;
-        align-items: center;
         flex-wrap: wrap;
+        align-items: center;
         justify-content: flex-end;
+        order: 2;
         gap: rem-calc(10);
 
         @include media-breakpoint-only(xs) {
@@ -141,6 +149,7 @@
             margin-left: rem-calc(30);
         }
 
+
         &--active {
             color: $blue;
         }
@@ -158,10 +167,6 @@
         font-weight: $font-weight-extra-bold;
         line-height: unitless-lh(28, 33);
 
-        &--accent {
-            color: $blue-100;
-        }
-
         @include media-breakpoint-down(md) {
             position: absolute;
             top: 0;
@@ -171,6 +176,10 @@
             align-items: center;
             font-size: $font-size-24;
             line-height: unitless-lh(24, 28);
+        }
+
+        &--accent {
+            color: $blue-100;
         }
     }
 }

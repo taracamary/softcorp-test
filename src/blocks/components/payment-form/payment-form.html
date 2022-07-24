@@ -60,21 +60,21 @@
     </div>
 
     <label for="payment-form__email">
-        <input class="payment-form__input" name="payment-form__email" id="payment-form__email" value="" type="email" placeholder="Ваш e-mail" required />
+        <input class="payment-form__input" id="payment-form__email" name="payment-form__email" value="" type="email" placeholder="Ваш e-mail" required />
     </label>
 
     <label for="payment-form__name">
-        <input class="payment-form__input" name="payment-form__name" id="payment-form__name" value="" type="text" placeholder="Ваше имя" required />
+        <input class="payment-form__input" id="payment-form__name" name="payment-form__name" value="" type="text" placeholder="Ваше имя" required />
     </label>
 
 
     <label class="payment-form__range" for="payment-form__range">
-        <p class="payment-form__form-text">
+        <span class="payment-form__form-text">
             Sed ut perspiciatis, unde omnis iste natus
             <span>75%</span>
-        </p>
+        </span>
 
-        <input class="payment-form__range-input" name="payment-form__range" type="range" min="1" max="100" value="75" />
+        <input class="payment-form__range-input" id="payment-form__range" name="payment-form__range" type="range" min="1" max="100" value="75" />
     </label>
 
     <div>
@@ -85,8 +85,8 @@
             Прикрепить файл
         </label>
 
-        <input class="payment-form__file-input" name="payment-form__file" type="file" accept=".pdf, .docx, .odt" />
+        <input class="payment-form__file-input" id="payment-form__file" name="payment-form__file" type="file" accept=".pdf, .docx, .odt" />
     </div>
 
-    <input class="payment-form__btn btn btn--blue" name="payment-form__btn" id="payment-form__btn-submit" type="submit" value="Отправить">
+    <input class="payment-form__btn btn btn--blue" id="payment-form__btn-submit" name="payment-form__btn" type="submit" value="Отправить">
 </form>

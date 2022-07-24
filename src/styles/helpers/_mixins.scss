@@ -32,7 +32,7 @@
 
 @mixin dots-line() {
     &::after {
-        content: "";
+        content: '';
         position: absolute;
         top: rem-calc(50);
         right: rem-calc(-70);

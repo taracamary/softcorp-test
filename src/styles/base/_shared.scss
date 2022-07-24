@@ -11,9 +11,9 @@
 .visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    width: rem-calc(1);
+    height: rem-calc(1);
+    margin: rem-calc(-1);
 }
 
 .section-divided {
@@ -42,22 +42,22 @@
 
     &--blue {
         background-color: $blue;
-        border: 1px solid $white;
+        border: rem-calc(1) solid $white;
         color: $white;
 
-        @include hover-focus-active {
+        @include hover-focus-active() {
             background-color: $white;
-            border: 1px solid $blue;
+            border: rem-calc(1) solid $blue;
             color: $blue;
         }
     }
 
     &--white {
         background-color: $white;
-        border: 1px solid $blue-400;
+        border: rem-calc(1) solid $blue-400;
         color: $blue-400;
 
-        @include hover-focus-active {
+        @include hover-focus-active() {
             border-color: $blue;
             color: $blue;
         }
