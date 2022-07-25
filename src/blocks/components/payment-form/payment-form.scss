@@ -133,6 +133,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: rem-calc(15);
         margin-top: 0;
         margin-bottom: rem-calc(10);
         font-size: $font-size-18;
