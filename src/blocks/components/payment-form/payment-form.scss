@@ -61,18 +61,19 @@
         border: rem-calc(1) solid rgba($grey-100, 0.85);
         border-radius: 0 0 rem-calc(3) rem-calc(3);
         overflow-y: auto;
+        scrollbar-color: $blue-200 $grey;
 
         &::-webkit-scrollbar {
             width: rem-calc(7);
         }
 
-        &::-webkit-scrollbar-track {
+        &::-webkit-scrollbar-track-piece {
             margin: rem-calc(3) 0;
             background: $grey;
             border-radius: rem-calc(3);
         }
 
-        &::-webkit-scrollbar-thumb {
+        &::-webkit-scrollbar-thumb:vertical {
             background-color: $blue-200;
             border-radius: rem-calc(3);
         }
