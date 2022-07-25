@@ -4,6 +4,7 @@
 * Install globally:
     * [Yarn](https://yarnpkg.com/getting-started): ```npm i -g yarn```
     * [Gulp](https://gulpjs.com/): ```npm i -g gulp```
+    * [Bem Tools](https://www.npmjs.com/package/bem-tools-core): ```npm i -g bem-tools-core```
 * Enter the folder with the downloaded project
 * Change the Yarn version specifically for the catalog: ```yarn set version berry```
 * Download the dependencies: ```yarn```
